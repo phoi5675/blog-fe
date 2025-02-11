@@ -3,6 +3,13 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 
 export default [
+  {
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
+  },
   { files: ["**/*.{js,mjs,cjs,ts}"] },
   { languageOptions: { globals: globals.browser } },
   ...tseslint.configs.recommended,
